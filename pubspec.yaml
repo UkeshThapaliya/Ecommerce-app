@@ -1,0 +1,79 @@
+name: rent_onway
+description: A new Flutter project.
+
+
+publish_to: 'none' 
+
+
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+
+
+#------- Packages----------#
+dependencies:
+  flutter:
+    sdk: flutter
+# Utility packages
+
+  #Icons
+  iconsax: ^0.0.8
+  cupertino_icons: ^1.0.2
+
+  #firebase
+  firebase_core: ^2.25.4
+  
+  
+#State Management
+get: ^4.6.6
+
+
+#Product Specefic packages
+
+
+
+
+
+
+#----------End of the Packages-----------#
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+
+
+
+
+
+flutter:
+
+  uses-material-design: true
+
+#--------Local assets--------#
+  assets:
+    - assets/logos/
+    - assets/icons/brands/
+    - assets/images/
+    
+
+#-------local fonts--------#
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets\fonts\coolvetica_rg.ttf
+        - asset: assets\fonts\Poppins-Bold.ttf
+          weight: 800
+        - asset: assets\fonts\Poppins-Light.ttf
+          weight: 300
+        - asset: assets\fonts\Poppins-Medium.ttf
+          weight: 400
+        - asset: assets\fonts\Poppins-Regular.ttf
+          weight: 500
+        - asset: assets\fonts\Poppins-SemiBold.ttf
+          weight: 600

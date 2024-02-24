@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "892615762929",
+    "project_id": "rentonway-b64ff",
+    "storage_bucket": "rentonway-b64ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892615762929:android:25fad27276e603d46bda50",
+        "android_client_info": {
+          "package_name": "com.example.rent_onway"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrv7WrDWqDhEPBAsOBax2XldCRsLq4-wg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
