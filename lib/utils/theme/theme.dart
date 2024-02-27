@@ -9,7 +9,6 @@ class ThAppTheme{
     primaryColor: Colors.green,
     scaffoldBackgroundColor: Colors.white,
     textTheme: ThAppTheme.lightTextTheme,
-    elevatedButtonTheme: 
   );
 
    static ThemeData darkTheme = ThemeData(
@@ -20,4 +19,4 @@ class ThAppTheme{
     scaffoldBackgroundColor: Colors.black,
     textTheme: ThAppTheme.darkTextTheme,
   );
-} 
+}
