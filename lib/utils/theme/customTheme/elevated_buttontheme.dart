@@ -3,9 +3,9 @@ import "package:flutter/material.dart";
 //light dark theme for elevated button
 class ThElevatedButtonTheme{
 ThElevatedButtonTheme._(); //avoid creating instances
-}
+
 //light theme
-  final lightElevatedButtonTheme = ElevatedButtonThemeData(
+ static final lightElevatedButtonTheme = ElevatedButtonThemeData(
   style: ElevatedButton.styleFrom(
     elevation: 0,
     foregroundColor:Colors.white,
@@ -19,7 +19,7 @@ ThElevatedButtonTheme._(); //avoid creating instances
   ),
 );
   //dark theme
- final darkElevatedButtonTheme = ElevatedButtonThemeData(
+ static final darkElevatedButtonTheme = ElevatedButtonThemeData(
   style: ElevatedButton.styleFrom(
     elevation: 0,
     foregroundColor:Colors.white,
@@ -32,4 +32,4 @@ ThElevatedButtonTheme._(); //avoid creating instances
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
   ),
 );
-
+}
