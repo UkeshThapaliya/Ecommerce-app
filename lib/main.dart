@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:rent_onway/rent_app.dart';
 
-void main() => runApp(const RentApp());
-class RentApp extends StatelessWidget {
-  const RentApp({super.key});
+void main() =>
+//Todo: Add Widgwt Binding
+//Todo: Init Local Storage
+//Todo: Await native Splash
+//Todo: Firebase
+//Todo: Authentication
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      themeMode: ThemeMode.system,
-      theme: ThemeData(),
-      darkTheme: ThemeData(),
-    );
-  }
-}
+ runApp(const RentApp());
+ 
