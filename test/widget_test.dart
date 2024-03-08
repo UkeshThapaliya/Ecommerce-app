@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rent_onway/main.dart';
+import 'package:rent_onway/rent_app.dart';
 
 
 void main() {

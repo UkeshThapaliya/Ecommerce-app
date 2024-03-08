@@ -12,11 +12,12 @@ dependencies:
   http: ^1.1.8 
   logger: ^2.0.1
   url_launcher: ^6.1.12
+  flutter_native_splash: ^2.3.10
   # Icons
   iconsax: ^0.0.8
   cupertino_icons: ^1.0.2
   # Firebase
-  firebase_core: ^2.25.4
+  firebase_core: ^2.27.0
   # State Management
   get: ^4.6.6
   get_storage: ^2.1.1
