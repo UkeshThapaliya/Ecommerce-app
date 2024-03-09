@@ -1,4 +1,0 @@
-#Sat Mar 09 01:39:50 NPT 2024
-base.0=C\:\\Users\\ukesh\\rent_onway\\rentonway-app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
