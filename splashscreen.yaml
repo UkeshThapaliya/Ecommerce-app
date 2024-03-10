@@ -1,14 +1,6 @@
 flutter_native_splash: 
   color: "#FFFFFF"
   color_dark: "#272727"
-  image: assets/logos/rentonway_light.png
-  image_dark: assets/logos/rentonway_dark.png
-
-  android_12:
-    color: "#FFFFFF"
-    color_dark: "#272727"
-    image: assets/logos/rentonway_light.png
-    image_dark: assets/logos/rentonway_dark.png
-
+  image: assets/logos/logolight.png
+  image_dark: assets/logos/logodark.png
   web: false
-

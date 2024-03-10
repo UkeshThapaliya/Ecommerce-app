@@ -9,4 +9,11 @@ class ThImages{
   static const String facebook = "assets/logos/Facebook.png";
   static const String google = "assets/logos/Google.png";
 
+  // Onboarding Images
+  static const String onBoardingImage1 = "assets/images/onboarding/onboarding1.gif";
+  static const String onBoardingImage2 = "assets/images/onboarding/onboarding2.gif";
+  static const String onBoardingImage3 = "assets/images/onboarding/onboarding3.gif";
+  
+
+
 }

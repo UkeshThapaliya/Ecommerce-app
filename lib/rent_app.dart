@@ -1,4 +1,7 @@
 import "package:flutter/material.dart";
+import "package:get/get.dart";
+import "package:rent_onway/features/authentication/screens/onboarding/onboarding.dart";
+import "package:rent_onway/utils/theme/theme.dart";
 
 //Using this class to setup all the helper function
 class RentApp extends StatelessWidget {
@@ -6,10 +9,11 @@ class RentApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       themeMode: ThemeMode.system,
-      theme: ThemeData(),
-      darkTheme: ThemeData(),
+      theme: ThAppTheme.lightTheme,
+      darkTheme: ThAppTheme.darkTheme,
+      home: const OnBoardingScreen(),
     );
   }
 }
