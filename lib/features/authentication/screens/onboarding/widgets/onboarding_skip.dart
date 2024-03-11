@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rent_onway/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:rent_onway/utils/constants/sizes.dart';
+import 'package:rent_onway/utils/device/device_utils.dart';
 
 class OnBoardingSkip extends StatelessWidget {
   const OnBoardingSkip({
@@ -8,6 +10,11 @@ class OnBoardingSkip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(top:-1, right: ThSize.defaultSpace,child: TextButton(onPressed: (){},child: const Text('Skip'),));
+    return Positioned(top: ThDeviceUtils.getAppBarHeight(), 
+    right: ThSize.defaultSpace,
+    child: TextButton(onPressed: () => OnBoardingController.instance.skipPage(),
+    child: const Text('Skip'),
+    )
+    );
   }
 }

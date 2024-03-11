@@ -1,5 +1,8 @@
 //This Class contain all the sizes which contain in projects
 class ThSize{
+   static const double onBoardingSubTitle1 = 8.0;
+  static const double onBoardingSubTitle2 = 8.0;
+  static const double onBoardingSubTitle3 = 8.0;
   //Sizes of padding and margin
   static const double xs = 4.0;
     static const double sm = 8.0;

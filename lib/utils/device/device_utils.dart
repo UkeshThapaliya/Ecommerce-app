@@ -1,8 +1,11 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ThDeviceUtils {
   static void hideKeyboard(BuildContext context) {
@@ -16,12 +19,12 @@ class ThDeviceUtils {
   }
 
   static bool isLandscapeOrientation(BuildContext context) {
-    final viewInsets = MediaQuery.of(context).viewInsets;
+    final viewInsets = View.of(context).viewInsets;
     return viewInsets.bottom == 0;
   }
 
   static bool isPortraitOrientation(BuildContext context) {
-    final viewInsets = MediaQuery.of(context).viewInsets;
+    final viewInsets = View.of(context).viewInsets;
     return viewInsets.bottom != 0;
   }
 
@@ -32,41 +35,41 @@ class ThDeviceUtils {
   }
 
   static double getScreenHeight(BuildContext context) {
-    return MediaQuery.of(context).size.height;
+    return MediaQuery.of(Get.context!).size.height;
   }
 
-  static double getPixelRatio(BuildContext context) {
-    return MediaQuery.of(context).devicePixelRatio;
+  static double getPixelRatio() {
+    return MediaQuery.of(Get.context!).devicePixelRatio;
   }
 
   static double getScreenWidth(BuildContext context) {
     return MediaQuery.of(context).size.width;
   }
 
-  static double getStatusBarHeight(BuildContext context) {
-    return MediaQuery.of(context).padding.top;
+  static double getStatusBarHeight() {
+    return MediaQuery.of(Get.context!).padding.top;
   }
 
-  static double getBottomNavigationBarHeight(BuildContext context) {
+  static double getBottomNavigationBarHeight() {
     return kBottomNavigationBarHeight;
   }
 
-  static double getAppBarHeight(BuildContext context) {
+  static double getAppBarHeight() {
     return kToolbarHeight;
   }
 
-  static double getKeyboardHeight(BuildContext context) {
-    final viewInsets = MediaQuery.of(context).viewInsets;
+  static double getKeyboardHeight() {
+    final viewInsets = MediaQuery.of(Get.context!).viewInsets;
     return viewInsets.bottom;
   }
 
-  static Future<bool> isKeyboardVisible(BuildContext context) async {
-    final viewInsets = MediaQuery.of(context).viewInsets;
+  static Future<bool> isKeyboardVisible() async {
+    final viewInsets = MediaQuery.of(Get.context!).viewInsets;
     return viewInsets.bottom > 0;
   }
 
   static Future<bool> isPhysicalDevices() async {
-    return Platform.isAndroid || Platform.isIOS;
+    return defaultTargetPlatform == TargetPlatform.android || defaultTargetPlatform == TargetPlatform.iOS;
   }
 
   static void vibrate(Duration duration) {
@@ -84,7 +87,7 @@ class ThDeviceUtils {
   }
 
   static void showStatusBar() {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.top, SystemUiOverlay.bottom]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
   }
 
   static Future<bool> hasInternetConnection() async {
@@ -105,16 +108,11 @@ class ThDeviceUtils {
   }
 
   static void launchUrl(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+    if (await canLaunchUrlString(url)) {
+      await launchUrlString(url);
     } else {
       throw 'Could not launch $url';
     }
   }
 }
 
-canLaunch(String url) {
-}
-
-launch(String url) {
-}
