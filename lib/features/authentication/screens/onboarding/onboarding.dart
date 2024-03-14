@@ -6,7 +6,6 @@ import "package:rent_onway/features/authentication/screens/onboarding/widgets/on
 import "package:rent_onway/features/authentication/screens/onboarding/widgets/onboarding_skip.dart";
 import "package:rent_onway/utils/constants/image_string.dart";
 import "package:rent_onway/utils/constants/text_string.dart";
-
 import "widgets/onboarding_dot_navigation.dart";
 
 class OnBoardingScreen extends StatelessWidget{

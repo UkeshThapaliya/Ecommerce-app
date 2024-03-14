@@ -1,6 +1,9 @@
 import "package:flutter/material.dart";
+import "package:get/get.dart";
 import "package:iconsax/iconsax.dart";
 import "package:rent_onway/common/styles/text_string.dart";
+import "package:rent_onway/features/authentication/screens/password_config/forget_password.dart";
+import "package:rent_onway/features/authentication/screens/signup/signup.dart";
 import "package:rent_onway/utils/constants/sizes.dart";
 
 class ThLoginForm extends StatelessWidget {
@@ -41,7 +44,7 @@ class ThLoginForm extends StatelessWidget {
                 ],
               ),
               //Forget Password
-          TextButton(onPressed: (){}, child:const Text (Thtexts.forgetPassword) ),
+          TextButton(onPressed: () => Get.to(() => const ForgetPassword()), child:const Text (Thtexts.forgetPassword) ),
             ],
           ),
         
@@ -52,7 +55,7 @@ class ThLoginForm extends StatelessWidget {
          const SizedBox(height: ThSize.spaceBtwItems),
         
           //Create Acc button
-          SizedBox(width: double.infinity,child:  OutlinedButton(onPressed: (){}, child: const Text(Thtexts.createAccount))),
+          SizedBox(width: double.infinity,child:  OutlinedButton(onPressed: () => Get.to(() => const SignupScreen()), child: const Text(Thtexts.createAccount))),
                 
           ],
           ),

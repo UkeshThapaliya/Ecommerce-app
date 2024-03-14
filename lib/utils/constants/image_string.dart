@@ -14,6 +14,12 @@ class ThImages{
   static const String onBoardingImage2 = "assets/images/onboarding/onboarding2.gif";
   static const String onBoardingImage3 = "assets/images/onboarding/onboarding3.gif";
   
-
+  // Animations
+   static const String productIllu = "assets/images/onboarding/onboarding1.gif";
+  static const String productsSaleIllu = "assets/images/onboarding/onboarding2.gif";
+  static const String staticSuccessIllu = "assets/images/animation/success.png";
+   static const String deliveredIllu = "assets/images/onboarding/onboarding1.gif";
+  static const String deliveredEmailIllu = "assets/images/animation/delivered_email.gif";
+  static const String verifyIllu = "assets/images/onboarding/onboarding3.gif";
 
 }
