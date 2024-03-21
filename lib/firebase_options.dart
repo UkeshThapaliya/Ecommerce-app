@@ -58,7 +58,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDrv7WrDWqDhEPBAsOBax2XldCRsLq4-wg',
-    appId: '1:892615762929:android:25fad27276e603d46bda50',
+    appId: '1:892615762929:android:0daf25dc344b97746bda50',
     messagingSenderId: '892615762929',
     projectId: 'rentonway-b64ff',
     storageBucket: 'rentonway-b64ff.appspot.com',
@@ -70,6 +70,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '892615762929',
     projectId: 'rentonway-b64ff',
     storageBucket: 'rentonway-b64ff.appspot.com',
+    androidClientId: '892615762929-1o6k13ur27iv5mmg9ue18tammlpjrrfc.apps.googleusercontent.com',
+    iosClientId: '892615762929-88sdudnp1bmg72biggljjv2mckioau69.apps.googleusercontent.com',
     iosBundleId: 'com.example.rentOnway',
   );
 }

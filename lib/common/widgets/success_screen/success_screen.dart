@@ -20,7 +20,7 @@ class SuccessScreen extends StatelessWidget {
             children: [
               //Images
                Image(
-                image: const AssetImage(ThImages.deliveredEmailIllu),
+                image: const AssetImage(ThImages.staticSuccessIllu),
                 width: ThHelperFun.screenWidth() * 0.6,
                 ),
               const SizedBox(height: ThSize.spaceBtwSections),

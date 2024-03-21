@@ -53,7 +53,7 @@ class Thtexts{
   static const String conformEmail = "Verify your email address!";
   static const String conformEmailSubTitle = "Congratulation! Your Account Awaits: Verify Your Email to Start Application";
   static const String emailNotReceivedMessage = "Didn't get the email? Check Your Junk/Spam or resend it";
-  static const String yourAccountCreatedTitle = "YOur Account Sucessfully Created";
+  static const String yourAccountCreatedTitle = "Your Account Created Sucessfully ";
   static const String yourAccountCreatedSubTitle = "Welcome to the Rent On Way: Your Account is Created,Enjoy your Renting";
 
 
