@@ -43,6 +43,7 @@ flutter:
     - assets/logos/logodark.png
     - assets/images/onboarding/
     - assets/images/animation/
+    - assets/icons/categories/
 
   fonts:
     - family: Poppins

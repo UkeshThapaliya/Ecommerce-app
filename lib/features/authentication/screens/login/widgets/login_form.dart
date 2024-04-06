@@ -4,6 +4,7 @@ import "package:iconsax/iconsax.dart";
 import "package:rent_onway/common/styles/text_string.dart";
 import "package:rent_onway/features/authentication/screens/password_config/forget_password.dart";
 import "package:rent_onway/features/authentication/screens/signup/signup.dart";
+import "package:rent_onway/navigation_menu.dart";
 import "package:rent_onway/utils/constants/sizes.dart";
 
 class ThLoginForm extends StatelessWidget {
@@ -51,7 +52,7 @@ class ThLoginForm extends StatelessWidget {
           const SizedBox(height: ThSize.spaceBtwSections,),
         
           //sign in button
-         SizedBox(width: double.infinity,child:  ElevatedButton(onPressed: (){}, child: const Text(Thtexts.signIn))),
+         SizedBox(width: double.infinity,child:  ElevatedButton(onPressed: () => Get.to(() => const NavigationMenu()), child: const Text(Thtexts.signIn))),
          const SizedBox(height: ThSize.spaceBtwItems),
         
           //Create Acc button
@@ -63,4 +64,3 @@ class ThLoginForm extends StatelessWidget {
     );
   }
 }
-

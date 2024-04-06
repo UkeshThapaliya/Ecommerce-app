@@ -58,4 +58,9 @@ class Thtexts{
   static const String yourAccountCreatedSubTitle = "Welcome to the Rent On Way: Your Account is Created,Enjoy your Renting";
 
 
+  //home
+  static const String homeAppbarTitle = "Good day for renting";
+   static const String homeAppbarSubTitle = "RentOnWay";
+
+
 }

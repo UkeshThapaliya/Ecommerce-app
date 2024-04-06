@@ -15,11 +15,18 @@ class ThImages{
   static const String onBoardingImage3 = "assets/images/onboarding/onboarding3.gif";
   
   // Animations
-  static const String productIllu = "";
-  static const String productsSaleIllu = "";
-  static const String staticSuccessIllu = "assets/images/animation/success.png";
-  static const String deliveredIllu = "";
+  static const String productIllu = "assets/images/animation/product.png";
+  static const String productsSaleIllu = "assetsi/mages/animation/ProductSale.gif";
+  static const String staticSuccessIllu = "assets/images/animation/Success.gif";
+  static const String deliveredIllu = "assets/images/animation/Delivered.gif";
   static const String deliveredEmailIllu = "assets/images/animation/delivered_email.gif";
-  static const String verifyIllu = "assets/images/animation/verify email.png";
+  static const String verifyIllu = "assets/images/animation/verified.gif";
+
+  //categories icon
+  static const String topsWear = "assets/icons/categories/Tops.png";
+  static const String bottomWear = "assets/icons/categories/Bottom Wear.png";
+  static const String outWear = "assets/icons/categories/Out Wear.png";
+  static const String formalWear = "assets/icons/categories/Formal Wear.png";
+  static const String footWear = "assets/icons/categories/FootWear.png";
 
 }
