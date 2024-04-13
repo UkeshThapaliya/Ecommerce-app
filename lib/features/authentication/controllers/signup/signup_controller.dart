@@ -1,5 +1,4 @@
 
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:rent_onway/data/repositories/authentication/authentication_repository.dart';
@@ -52,23 +51,25 @@ class SignupController extends GetxController{
       }
 
       //Register user in firebase auth and save user data in firebase
-      final UserCredential = await AuthenticationRepository.instance.registerWithEmailAndPAssword(email.text.trim(), password.text.trim());
+      final userCredential = await AuthenticationRepository.instance.registerWithEmailAndPassword(email.text.trim(), password.text.trim());
 
       //save auth user data in firebase firestore
       final newUser = UserModel(
-        id: UserCredential.user!.uid,
+        id: userCredential.user!.uid,
         firstName: firstName.text.trim(),
          lastName: lastName.text.trim(),
-         userName: username.text.trim(),
+         username: username.text.trim(),
          email: email.text.trim(),
          phoneNo:phoneNo.text.trim(),
          profilePicture: '',
+          
       );
        final userRepository = Get.put(UserRepository());
-        await userRepository.saveUserRecord(newuser);
+        await userRepository.saveUserRecord(newUser);
 
       
-
+      // Remove loader
+      ThFullScreenLoader.stopLoading();
 
       //show Success Message
         ThLoaders.successSnackBar(title: 'Congratulations', message: 'Your account has been created! Verify email to continue.');
@@ -79,11 +80,8 @@ class SignupController extends GetxController{
     //Remove loader
         ThFullScreenLoader.stopLoading();
 
-
-    } catch (e){
-
       //Show some generic error to the user
-    ThLoaders.errorSnackBar(title:'Oh Snap !', message: e.toString());
+    ThLoaders.errorSnackBar(title:'Oh Sorry !', message: e.toString()); 
     }finally{
       //remove user
       ThFullScreenLoader.stopLoading();

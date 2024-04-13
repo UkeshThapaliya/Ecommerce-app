@@ -1,12 +1,6 @@
-import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:get/get.dart';
-import 'package:rent_onway/data/repositories/user/user_repository.dart';
-import 'package:rent_onway/features/authentication/screens/signup/verify_email.dart';
 import 'package:rent_onway/utils/formatter/formatter.dart';
-import 'package:rent_onway/utils/popups/fullscreen_loader.dart';
-import 'package:rent_onway/utils/popups/loaders.dart';
 
 class UserModel{
   //Keeping those value final which i do not want to update
@@ -55,13 +49,14 @@ Map<String, dynamic> toJson(){
     'FirstName': firstName,
     'Lastname': lastName,
     'Username':username,
+    'Email': email,
     'PhoneNo': phoneNo,
     'ProfilePicture': profilePicture,
   };
 }
 
 //Create a usermodel from factory method from a firebase docment snapshot
-factory UserModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> document) async {
+factory UserModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> document){
   if(document.data() != null){
     final data = document.data()!;
     return UserModel(
@@ -73,26 +68,11 @@ factory UserModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> document) 
            phoneNo: data['PhoneNo'] ?? '',
             profilePicture: data['ProfilePicture'] ?? '',
            );
-           
-        final userRepository = Get.put(UserRepository());
-        await userRepository.saveUserRecord(newuser);
+  } else {
+    // Handle the case where document data is null
+    throw StateError('Document data is null');
+}
 
-        //Remove loader
-        ThFullScreenLoader.stopLoading();
-
-        //show Success Message
-        ThLoaders.successSnackBar(title: 'Congratulations', message: 'Your account has been created! Verify email to continue.');
-
-        //Move to Verify Email Screen
-        Get.to(() => const VerifyEmailScreen());
-  }catch (e){
-    /Remove loader
-        ThFullScreenLoader.stopLoading();
-
-        //Show some generic error to the user
-        ThLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
-
-  }
 }
 
 }

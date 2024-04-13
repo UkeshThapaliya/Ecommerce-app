@@ -6,6 +6,12 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:rent_onway/features/authentication/screens/login/login.dart';
 import 'package:rent_onway/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:rent_onway/utils/exceptions/firebase_auth_exception.dart';
+import 'package:rent_onway/utils/exceptions/firebase_exception.dart';
+import 'package:rent_onway/utils/exceptions/format_exception.dart';
+import 'package:rent_onway/utils/exceptions/platform_exception.dart';
+
+
 
 class AuthenticationRepository extends GetxController{
   static AuthenticationRepository get instance => Get.find();
@@ -25,6 +31,7 @@ class AuthenticationRepository extends GetxController{
   screenRedirect()async{
     //local Storage
     deviceStorage.writeIfNull('IsFirstTime', true);
+
     //check if its the first time launching the app
 
     deviceStorage.read('IsFirstTime') != true ? 
@@ -38,7 +45,7 @@ class AuthenticationRepository extends GetxController{
   //Email Authentication- Sign In
 
   //Email Authentication- Register
-  Future<UserCredential> registerWithEmailAndPAssword(String email, String password) async{
+  Future<UserCredential> registerWithEmailAndPassword(String email, String password) async{
     try{
       return await _auth.createUserWithEmailAndPassword(email: email, password: password);
     }on FirebaseAuthException catch (e){
@@ -46,7 +53,7 @@ class AuthenticationRepository extends GetxController{
     }on FirebaseException catch (e){
       throw ThFirebaseException(e.code).message;
     }on FormatException catch (_){
-      throw ThFormaException();
+      throw const ThFormatException();
     }on PlatformException catch (e){
       throw ThPlatformException(e.code).message;
     } catch (e){
@@ -54,12 +61,27 @@ class AuthenticationRepository extends GetxController{
     }
   }
 
-  
+    //Email Verification- Mail Verification
+    Future<void> sendEmailVerification() async{
+    try{
+      await _auth.currentUser?.sendEmailVerification();
+    }on FirebaseAuthException catch (e){
+      throw ThFirebaseAuthException(e.code).message;
+    }on FirebaseException catch (e){
+      throw ThFirebaseException(e.code).message;
+    }on FormatException catch (_){
+      throw const ThFormatException();
+    }on PlatformException catch (e){
+      throw ThPlatformException(e.code).message;
+    } catch (e){
+      throw 'Something went wrong, please try again';
+    }
+  }
 
 
   //ReAuthenticate- ReAutenticate User
 
-  //Email Verification- Mail Verification
+
 
   //EmailAuthentication- Forget Password
 

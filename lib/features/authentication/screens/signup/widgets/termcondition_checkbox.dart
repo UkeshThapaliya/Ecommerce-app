@@ -44,4 +44,4 @@ class ThTermConditionCheckbox extends StatelessWidget {
         
         );
   }
-}
+}  

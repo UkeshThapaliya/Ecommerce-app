@@ -21,6 +21,7 @@ class ThImages{
   static const String deliveredIllu = "assets/images/animation/Delivered.gif";
   static const String deliveredEmailIllu = "assets/images/animation/delivered_email.gif";
   static const String verifyIllu = "assets/images/animation/verified.gif";
+  static const String docerAnimation = "assets/images/animation/docerAnimation.gif";
 
   //categories icon
   static const String topsWear = "assets/icons/categories/Tops.png";
@@ -28,5 +29,11 @@ class ThImages{
   static const String outWear = "assets/icons/categories/Out Wear.png";
   static const String formalWear = "assets/icons/categories/Formal Wear.png";
   static const String footWear = "assets/icons/categories/FootWear.png";
+
+  //Banners
+  static const String banner1 = "assets/images/banners/banner1.jpeg";
+  static const String banner2 = "assets/images/banners/banner2.jpeg";
+  static const String banner3 = "assets/images/banners/banner3.jpeg";
+
 
 }
