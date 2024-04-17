@@ -25,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -58,7 +55,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDrv7WrDWqDhEPBAsOBax2XldCRsLq4-wg',
-    appId: '1:892615762929:android:0daf25dc344b97746bda50',
+    appId: '1:892615762929:android:25fad27276e603d46bda50',
     messagingSenderId: '892615762929',
     projectId: 'rentonway-b64ff',
     storageBucket: 'rentonway-b64ff.appspot.com',
@@ -73,5 +70,16 @@ class DefaultFirebaseOptions {
     androidClientId: '892615762929-1o6k13ur27iv5mmg9ue18tammlpjrrfc.apps.googleusercontent.com',
     iosClientId: '892615762929-88sdudnp1bmg72biggljjv2mckioau69.apps.googleusercontent.com',
     iosBundleId: 'com.example.rentOnway',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyCkJbyTKPv0pQGKyJ40aIp_boQ8hhWT8N8',
+    appId: '1:892615762929:ios:c6f0b7449050cb946bda50',
+    messagingSenderId: '892615762929',
+    projectId: 'rentonway-b64ff',
+    storageBucket: 'rentonway-b64ff.appspot.com',
+    androidClientId: '892615762929-1o6k13ur27iv5mmg9ue18tammlpjrrfc.apps.googleusercontent.com',
+    iosClientId: '892615762929-ecbs7p8tsotr621vrm11t2r10ubdbq2f.apps.googleusercontent.com',
+    iosBundleId: 'com.example.rentOnway.RunnerTests',
   );
 }

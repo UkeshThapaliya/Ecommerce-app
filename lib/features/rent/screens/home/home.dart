@@ -59,7 +59,12 @@ class HomeScreen extends StatelessWidget{
                          
             Padding(
               padding: EdgeInsets.all(ThSize.defaultSpace),
-              child: ThPromoSlider(banners: [ThImages.banner1,ThImages.banner2,ThImages.banner3],),
+              child: Column(
+                children: [
+                  //promo slider
+                  ThPromoSlider(banners: [ThImages.banner1,ThImages.banner2,ThImages.banner3],),
+                ],
+              ),
             ),
         
                 ],
