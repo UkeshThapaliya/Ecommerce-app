@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/ukesh/rent_onway/rentonway-app/linux"
+    "cmake.sourceDirectory": "C:/Users/ukesh/rent_onway/rentonway-app/linux",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
