@@ -15,7 +15,9 @@ class RentApp extends StatelessWidget {
       theme: ThAppTheme.lightTheme,
       darkTheme: ThAppTheme.darkTheme,
       initialBinding: GeneralBindings(),
+
       //Show loader or circular progress indicator
+      
       home: const Scaffold(backgroundColor: ThColors.primary, body: Center(child: CircularProgressIndicator(color: Colors.white,),),),
     );
   }

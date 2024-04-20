@@ -46,6 +46,23 @@ flutter:
     - assets/images/animation/
     - assets/icons/categories/
     - assets/images/banners/
+    - assets/images/products/
+    - assets/images/products/adidas
+    - assets/images/products/clarks
+    - assets/images/products/converse
+    - assets/images/products/dr_martens
+    - assets/images/products/lacoste
+    - assets/images/products/levis
+    - assets/images/products/lv
+    - assets/images/products/newbalance
+    - assets/images/products/nike
+    - assets/images/products/northface
+    - assets/images/products/puma
+    - assets/images/products/rayban
+    - assets/images/products/rebook
+    - assets/images/products/zara
+    - assets/images/products/formal wear
+
 
   fonts:
     - family: Poppins

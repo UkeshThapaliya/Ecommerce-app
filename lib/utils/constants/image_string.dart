@@ -31,9 +31,12 @@ class ThImages{
   static const String footWear = "assets/icons/categories/FootWear.png";
 
   //Banners
-  static const String banner1 = "assets/images/banners/banner1.jpeg";
-  static const String banner2 = "assets/images/banners/banner2.jpeg";
-  static const String banner3 = "assets/images/banners/banner3.jpeg";
+  static const String banner1 = "assets/images/banners/banner1.png";
+  static const String banner2 = "assets/images/banners/banner2.png";
+  static const String banner3 = "assets/images/banners/banner3.png";
+
+  //products
+  static const String productImage1 = " "; 
 
 
 }

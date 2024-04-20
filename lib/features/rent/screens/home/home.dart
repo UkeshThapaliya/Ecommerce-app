@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:rent_onway/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:rent_onway/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:rent_onway/common/widgets/products/products_cards/product_card_vertical.dart';
 import 'package:rent_onway/common/widgets/texts/section_heading.dart';
 import 'package:rent_onway/features/rent/screens/home/widgets/home_appbar.dart';
 import 'package:rent_onway/features/rent/screens/home/widgets/home_categories.dart';
@@ -63,6 +64,10 @@ class HomeScreen extends StatelessWidget{
                 children: [
                   //promo slider
                   ThPromoSlider(banners: [ThImages.banner1,ThImages.banner2,ThImages.banner3],),
+                  SizedBox(height: ThSize.spaceBtwSections),
+
+                  //popular product
+                  ThProductCardVertical(),
                 ],
               ),
             ),
