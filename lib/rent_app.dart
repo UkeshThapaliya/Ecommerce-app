@@ -17,11 +17,15 @@ class RentApp extends StatelessWidget {
       initialBinding: GeneralBindings(),
 
       //Show loader or circular progress indicator
-      
-      home: const Scaffold(backgroundColor: ThColors.primary, body: Center(child: CircularProgressIndicator(color: Colors.white,),),),
+
+      home: const Scaffold(
+        backgroundColor: ThColors.primary,
+        body: Center(
+          child: CircularProgressIndicator(
+            color: Colors.white,
+          ),
+        ),
+      ),
     );
   }
-} 
-
-
-  
+}

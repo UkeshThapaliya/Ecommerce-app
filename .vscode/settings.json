@@ -1,4 +1,7 @@
 {
     "cmake.sourceDirectory": "C:/Users/ukesh/rent_onway/rentonway-app/linux",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "notebook.formatOnSave.enabled": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
 }
