@@ -11,15 +11,27 @@ class ThHomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ThAppBar(title: Column(
-      children: [
-        Text(Thtexts.homeAppBarTitle, style: Theme.of(context).textTheme.labelMedium!.apply(color: ThColors.grey)),
-        Text(Thtexts.homeAppBarSubTitle, style: Theme.of(context).textTheme.headlineSmall!.apply(color: ThColors.white)),
-      ],
+    return ThAppBar(
+      title: Column(
+        children: [
+          Text(Thtexts.homeAppBarTitle,
+              style: Theme.of(context)
+                  .textTheme
+                  .labelMedium!
+                  .apply(color: ThColors.grey)),
+          Text(Thtexts.homeAppBarSubTitle,
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineSmall!
+                  .apply(color: ThColors.white)),
+        ],
       ),
       actions: [
-       ThCartCounterIcon(onPressed: () {  }, iconColor: ThColors.white,)
+        ThCartCounterIcon(
+          onPressed: () {},
+          iconColor: ThColors.white,
+        )
       ],
-      );
+    );
   }
 }

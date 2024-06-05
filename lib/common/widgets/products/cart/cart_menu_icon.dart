@@ -4,33 +4,39 @@ import 'package:rent_onway/utils/constants/color.dart';
 
 class ThCartCounterIcon extends StatelessWidget {
   const ThCartCounterIcon({
-    super.key, required this.iconColor, required this.onPressed,
+    super.key,
+    required this.iconColor,
+    required this.onPressed,
   });
-   final Color iconColor;
+  final Color iconColor;
   final VoidCallback onPressed;
- 
 
   @override
   Widget build(BuildContext context) {
     return Stack(
-     children: [
-        IconButton(onPressed: onPressed, icon:  Icon(Iconsax.shopping_bag, color: iconColor)),
+      children: [
+        IconButton(
+            onPressed: onPressed,
+            icon: Icon(Iconsax.shopping_bag, color: iconColor)),
         Positioned(
-         right: 0,
-         child: Container(
-           width: 18,
-           height: 18,
-           decoration: BoxDecoration(
-             color: ThColors.black,
-             borderRadius: BorderRadius.circular(100),
-           ),
-           child: Center(
-             child: Text('2', style: Theme.of(context).textTheme.labelLarge!.apply(color: ThColors.white, fontSizeFactor: 0.8)),
-           ),
-         ),
+          right: 0,
+          child: Container(
+            width: 18,
+            height: 18,
+            decoration: BoxDecoration(
+              color: ThColors.black,
+              borderRadius: BorderRadius.circular(100),
+            ),
+            child: Center(
+              child: Text('2',
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelLarge!
+                      .apply(color: ThColors.white, fontSizeFactor: 0.8)),
+            ),
+          ),
         )
-    
-     ],
+      ],
     );
   }
 }
